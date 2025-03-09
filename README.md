@@ -1,6 +1,14 @@
 # Facebook-Messenger-JSON-viewer
 If you've downloaded your Facebook data in JSON format, this tool lets you read the chats more intuitively.
 Useful if you've deleted Facebook, but downloaded your JSON data.
+Used various AI sites to make the code current, Github Copilot helped the most.
+Added:
+- inline images
+- audio and video rendering
+- reactions
+- urls converted to clickable links
+- timestamp to the right of participant, it's set for EST, edit for your timezone.
+- Swapped the original left right bubble participants. I wanted left to be me.
 
 **TL;DR** [here's the link to try it out](https://simonwong.io/fb_chat_viewer/)
 
