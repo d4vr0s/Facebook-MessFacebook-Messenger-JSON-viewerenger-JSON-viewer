@@ -84,6 +84,97 @@ p, label {
     visibility: visible;
 }
 
+.reaction-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5px;
+}
+
+.reaction {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 2px 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-size: 0.8em;
+}
+
+/* Define a class for larger hoverover images */
+.reaction-container .reaction:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%; /* Position the hoverover content above the emoji */
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 24px; /* Adjust the font size as needed */
+  z-index: 9999;
+  white-space: nowrap;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+/* Define a class for emoji hoverover */
+.emoji-hover:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%; /* Position the hoverover content above the emoji */
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 24px; /* Adjust the font size as needed */
+  z-index: 9999;
+  white-space: nowrap;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+/* Adjust the positioning of the emoji hoverover */
+.emoji-hover:hover {
+  position: relative;
+}
+
+/* Adjust the positioning of the hoverover images */
+.reaction-container .reaction:hover {
+  position: relative;
+}
+
+/* Style for the timestamp */
+.timestamp {
+  margin-left: 10px; /* Space between the name and timestamp */
+  font-size: 0.8em; /* Make the timestamp slightly smaller */
+  color: #888; /* Light grey color */
+}
+
+.chat-image {
+  max-width: 100%;
+  max-height: 200px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.full-screen-image-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.full-screen-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
 
 .bubble-right {
     font-family: sans-serif;
@@ -94,6 +185,7 @@ p, label {
     padding: 10px;
     width:45%;
     float: right;
+    z-index: 1;
 }
 .name-right{
     font-family: sans-serif;
@@ -111,6 +203,7 @@ p, label {
     padding: 10px;
     float: left;
     width: 45%;
+    z-index: 1;
 }
 .name-left{
     font-family: sans-serif;
