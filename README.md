@@ -11,6 +11,7 @@ Added:
 - urls converted to clickable links
 - timestamp to the right of participant, it's set for EST, edit for your timezone.
 - Swapped the original left right bubble participants. I wanted left to be me.
+- added day of week hoverover to the timestamps
 
 
 As raw JSON, it's hard to read and it's in reverse chronological order:
